@@ -11,5 +11,4 @@ print(''.join(chars))
 # smart guy, you made it. the next level is [105, 110, 116, 101, 103, 114, 105, 116, 121]
 hint = [105, 110, 116, 101, 103, 114, 105, 116, 121]
 print(''.join(chr(x) for x in hint))
-
 # integrity
