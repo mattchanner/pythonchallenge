@@ -1,7 +1,7 @@
 import pickle
-import urllib2
+from urllib.request import urlopen
 
-response = urllib2.urlopen("http://www.pythonchallenge.com/pc/def/banner.p")
+response = urlopen("http://www.pythonchallenge.com/pc/def/banner.p")
 data = pickle.load(response)
 fp = open("output.txt", "w")
 for line in data:

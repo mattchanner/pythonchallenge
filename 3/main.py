@@ -1,9 +1,9 @@
-import urllib2
+from urllib.request import urlopen
 import re
 
 def get_comments(url):
     """ fetches the source html file from the URL and returns the text within the html comments. """
-    response = urllib2.urlopen(url)
+    response = urlopen(url)
     html = response.read()
     return "".join(re.findall("<!--([\w \n]*)-->", html))
 

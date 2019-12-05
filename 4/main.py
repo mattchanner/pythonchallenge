@@ -1,9 +1,9 @@
-import urllib2
+from urllib.request import urlopen
 import re
 
 def get_next(number):
     url = "http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=" + str(number)
-    response = urllib2.urlopen(url)
+    response = urlopen(url)
     contents = response.read()
     matches = re.findall("the next nothing is (\d+)", contents)
     return (contents, matches[0] if len(matches) else '')
